@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+
+.game-container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.game-board {
+    display: grid;
+    background-color: black;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+    font-weight: bold;
+}
+
+.cell:hover {
+    background-color: grey;
+}
+
+.player-x {
+    color: red;
+}
+
+.player-o {
+    color: blue;
+}
+
+.score-board {
+    margin-bottom: 20px;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+}
+
+.popup-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#closePopup {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
